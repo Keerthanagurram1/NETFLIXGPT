@@ -39,19 +39,21 @@ const Header = () => {
 
     return (
         <div className="absolute px-8 py-3 z-10 w-screen bg-gradient-to-b from-black flex justify-between">
-            <img className="w-44" src={LOGO}
+            <img className="w-36" src={LOGO}
                 alt="netflix Logo" />
 
             {user ? (
                 <div className="flex items-center">
                     <img
-                        className="w-20 h-20 rounded-full"
-                        src={user?.photoURL}
+                        className="w-12 h-12 rounded-full"
+                        src="https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.webp"
                         alt="User Profile"
                     />
                     <button onClick={signOutHandle} className="text-red-500 font-bold ml-4">Sign Out</button>
                 </div>
             ) : (
+
+                
                 <div></div>
             )}
         </div>

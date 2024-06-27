@@ -36,7 +36,7 @@ const Login = () => {
                 if (nameValue) {
                     await updateProfile(userCredential.user, {
                         displayName: nameValue,
-                        photoURL: "https://avatars.githubusercontent.com/u/12824231?v=4"
+                        photoURL: "https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.webp"
                     });
                 }
 
@@ -54,7 +54,7 @@ const Login = () => {
                 if (nameValue) {
                     await updateProfile(userCredential.user, {
                         displayName: nameValue,
-                        photoURL: "https://avatars.githubusercontent.com/u/12824231?v=4"
+                        photoURL: "https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.webp"
                     });
                 }
 
