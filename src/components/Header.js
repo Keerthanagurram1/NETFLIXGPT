@@ -51,24 +51,24 @@ const Header = () => {
     };
 
     return (
-        <div className="absolute px-8 py-3 z-10 w-screen bg-gradient-to-b from-black flex justify-between">
-            <img className="w-36" src={LOGO}
+        <div className="absolute px-8 py-3 z-10 w-screen bg-gradient-to-b from-black flex flex-col md:flex-row justify-between">
+            <img className=" mx-auto md:mx-0 w-24 md:w-36" src={LOGO}
                 alt="netflix Logo" />
 
             {user ? (
-                <div className="flex items-center">
-                    {showGptSearch && <select className="py-2 px-6 my-2 bg-purple-800 text-white rounded-lg" onChange={handlelanguage}>
+                <div className="flex justify-between items-center">
+                    {showGptSearch && <select className="py-1 md:py-2 px-1 md:px-6 my-0 md:my-2 bg-purple-800 text-white rounded-lg" onChange={handlelanguage}>
                         {SUPPORTED_LANG.map(language =>  <option key={language.identifier} value={language.identifier}>{language.name}</option>)}
                         
                     </select>}
                     <button onClick={handleGptSearch}
-                    className="py-2 px-6 my-2 mx-4 bg-purple-800 text-white rounded-lg"> {showGptSearch ? "HomePage":"GPT Search"}</button>
+                    className=" py-1 md:py-2 px-3 md:px-6 my-0 md:my-2 mx-2 bg-purple-800 text-white rounded-lg"> {showGptSearch ? "HomePage":"GPT Search"}</button>
                     <img
-                        className="w-12 h-12 rounded-full"
+                        className="w-8 md:w-12 h-8 md:h-12 rounded-full hidden md:block"
                         src="https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.webp"
                         alt="User Profile"
                     />
-                    <button onClick={signOutHandle} className="text-white font-bold ml-4"> Sign Out
+                    <button onClick={signOutHandle} className="text-white font-bold ml-1 md:ml-4 text-sm md:text-lg"> Sign Out
                         
                     </button>
                 </div>

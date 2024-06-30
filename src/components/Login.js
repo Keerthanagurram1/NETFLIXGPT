@@ -85,8 +85,8 @@ const Login = () => {
                     className="w-full h-full object-cover"
                 />
             </div>
-            <form onSubmit={(e) => e.preventDefault()} className="bg-black bg-opacity-75 absolute inset-x-0 top-1/2 transform -translate-y-1/2 max-w-md mx-auto p-8 rounded-lg">
-                <h1 className="text-white font-bold text-3xl mb-6">
+            <form onSubmit={(e) => e.preventDefault()} className="bg-black bg-opacity-75 absolute inset-x-0 top-1/2 transform -translate-y-1/2 w-3/4 md:max-w-md mx-auto p-8 rounded-lg">
+                <h1 className="text-white font-bold text-2xl md:text-3xl mb-6">
                     {isSignInForm ? "Sign In" : "Sign Up"}
                 </h1>
                 {!isSignInForm && (
@@ -94,26 +94,26 @@ const Login = () => {
                         ref={nameRef}
                         type="text"
                         placeholder="Full Name"
-                        className="text-white w-full p-3 mb-4 bg-gray-700 rounded-lg"
+                        className="text-white w-full p-3 mb-4 bg-gray-700 rounded-lg text-sm md:text-lg"
                     />
                 )}
                 <input
                     ref={emailRef}
-                    type="email" // Use type="email" for better validation
+                    type="email"
                     placeholder="Email Address"
-                    className="text-white w-full p-3 mb-4 bg-gray-700 rounded-lg"
+                    className="text-white w-full p-3 mb-4 bg-gray-700 rounded-lg text-sm md:text-lg"
                 />
                 <input
                     ref={passwordRef}
                     type="password"
                     placeholder="Password"
-                    className="text-white w-full p-3 mb-4 bg-gray-700 rounded-lg"
+                    className="text-white text-sm md:text-lg w-full p-3 mb-4 bg-gray-700 rounded-lg"
                 />
-                <p className="text-red-700 font-bold text-lg">{errorMessage}</p>
+                <p className="text-red-700 font-bold text:sm md:text-lg">{errorMessage}</p>
                 <button className="bg-red-700 text-white mx-2 p-3 my-6 w-full rounded-lg" onClick={handleButton}>
                     {isSignInForm ? "Sign In" : "Sign Up"}
                 </button>
-                <p className="text-white mx-2 cursor-pointer" onClick={toggleForm}>
+                <p className="text-white mx-2 cursor-pointer text-sm md:text-lg" onClick={toggleForm}>
                     {isSignInForm ? "New to Netflix? Sign Up Now." : "Already Registered? Sign In Now."}
                 </p>
             </form>
