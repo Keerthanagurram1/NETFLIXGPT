@@ -22,9 +22,6 @@ export const SUPPORTED_LANG = [
     { identifier: "Telugu", name: "Telugu" },
 ];
 
-// export const GPT_KEY = process.env.REACT_APP_OPENAI_API_KEY;
-export const GPT_KEY ="sk-proj-5hPk96KufCDxb7ob1RngT3BlbkFJafZreIrmmDIXAzL1axYZ" ;
+export const GPT_KEY = process.env.REACT_APP_OPENAI_API_KEY
 
-
-// console.log('API Key:', process.env.REACT_APP_OPENAI_API_KEY);
 
